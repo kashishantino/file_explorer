@@ -1,95 +1,36 @@
-/* .container {
-  margin: 20px auto;
-  max-width: 600px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
-button {
-  padding: 5px 10px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.modal-dialog {
-  max-width: 400px;
-}
-
-.modal-content {
-  padding: 20px;
-  animation: slideIn 0.3s ease;
-  background-color: #f8f9fa;
-  border: 2px solid #007bff;
-  border-radius: 8px;
-}
-
-.modal-title {
-  margin-bottom: 10px;
-  color: #007bff;
-  font-size: 20px;
-}
-
-.modal-body p {
-  margin-bottom: 5px;
-}
-
-.modal-footer {
-  justify-content: flex-end;
-  border-top: none;
-}
-
-.modal-footer button {
-  margin-left: 10px;
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateY(-100px);
-    opacity: 0;
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-} 
+  
 
-  */
-
-  .container {
-    margin: 20px auto;
-    max-width: 600px;
+   .container {
+    margin: 30px auto;
+    max-width: 900px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: left;
+    
   }
   
   table {
     width: 100%;
+    padding: left 50px;
     border-collapse: collapse;
+    border-radius: 10px;
   }
   
   th,
   td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #c1c1c1;
+    text-transform: capitalize;
   }
   
   th {
@@ -110,15 +51,25 @@ button:hover {
   }
   
   .modal-dialog {
-    max-width: 400px;
+    position: absolute; /* Changed position property */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100% - 1rem);
+    max-height: 80vh;
+    width: 80%;
   }
-  
   .modal-content {
     padding: 20px;
     animation: slideIn 0.3s ease;
     background-color: #f8f9fa;
     border: 2px solid #007bff;
     border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
   }
   
   .modal-title {
@@ -132,7 +83,9 @@ button:hover {
   }
   
   .modal-footer {
-    justify-content: flex-end;
+    display: flex;
+    justify-content: center;
+
     border-top: none;
   }
   
@@ -151,61 +104,25 @@ button:hover {
     }
   }
   
-  /* Additional CSS */
-  
-  .container {
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-  }
-  
-  .file-input {
-    margin-bottom: 10px;
-  }
-  
-  .file-name {
-    max-width: 150px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
-  .file-info {
+  .file-upload {
     display: flex;
-    align-items: center;
-    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
   }
   
-  .file-icon {
-    width: 20px;
-    height: 20px;
-    fill: #007bff;
-  }
-  
-  .file-size {
-    font-size: 12px;
-    color: #6c757d;
-  }
-  
-  .info-button {
-    font-size: 14px;
-    background-color: transparent;
-    border: none;
-    color: #007bff;
+  .file-upload input[type="file"] {
+    display: inline-block;
+    padding: 10px 50px;
+
+    background-color: #007bff;
+    color:white;
+    border-radius: 4px;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
   }
   
-  .info-button:hover {
-    color: #0056b3;
-  }
-  
-  .file-info-modal {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-  
-  .file-info-modal p {
-    margin-bottom: 10px;
+  .file-upload input[type="file"]:hover {
+    background-color: #0056b3;
+    
   }
   
